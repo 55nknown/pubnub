@@ -16,7 +16,7 @@ scripts:
 
 dependencies:
   async: ^2.5.0
-  cbor: ^4.0.0
+  cbor: ^5.1.0
   convert: ^3.0.0
   crypto: ^3.0.0
   encrypt: ^5.0.0-beta.1

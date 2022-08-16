@@ -14,8 +14,8 @@ Map<dynamic, dynamic> parseToken(String base64UrlEncodedToken) {
 
   final decodedToken = base64Url.decode(base64UrlEncodedToken + padding);
 
-  final instance = Cbor()..decodeFromList(decodedToken);
-  var data = instance.getDecodedData()!.cast<Map>();
+  var data = cbor.decode(decodedToken).toObject();
+  data = (data as List).cast<Map>();
   var tokenData = data.first.cast<List, dynamic>();
 
   Map<String, dynamic> decodeMap(Map input) {
